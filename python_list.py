@@ -25,5 +25,21 @@ def list_reverse(input_list):
 		list_len = list_len -1
 	input_list= "".join(input_list)
 	return input_list
+def fib(n):
+    if n <= 1:
+        return 1
+    a, b = 1, 1
+
+    for i in range(2, n + 1):
+        a, b = b, a + b
+
+    return b
+
+
+def fib1(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return fib1(n-1) + fib1(n-2)
 if __name__ == '__main__':
 	print list_reverse(new_list)
